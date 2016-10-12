@@ -1,0 +1,25 @@
+{
+  "name": "hooters-website",
+  "version": "0.1.0",
+  "licence": "UNLICENCED",
+  "private": "true",
+  "description": "Hooters Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themorrisonagency/hooters-website.git"
+  },
+  "author": "Morrison Agency",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-sass": "^2.3.2",
+    "path": "^0.12.7"
+  }
+}
