@@ -1,12 +1,12 @@
 {
-  "name": "hooters-website",
+  "name": "email-gulper",
   "version": "0.1.0",
   "licence": "UNLICENCED",
   "private": "true",
-  "description": "Hooters Website",
+  "description": "Email Gulper",
   "repository": {
     "type": "git",
-    "url": "https://github.com/themorrisonagency/hooters-website.git"
+    "url": "https://github.com/themorrisonagency/email-gulper.git"
   },
   "author": "Morrison Agency",
   "scripts": {
@@ -17,6 +17,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
     "gulp-inline-css": "^3.1.0",
     "gulp-inline-source": "^3.0.0",
     "gulp-sass": "^2.3.2",

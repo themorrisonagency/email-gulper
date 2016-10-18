@@ -3,6 +3,7 @@ var browserSync     = require('browser-sync'),
     concat          = require('gulp-concat'),
     path            = require('path'),
     sass            = require('gulp-sass'),
+    imagemin        = require('gulp-imagemin'),
     inlinesource    = require('gulp-inline-source'),
     inlineCss       = require('gulp-inline-css');
 
@@ -22,6 +23,7 @@ gulp.task('serve', ['sass', 'inline'], function() {
     }
   });
 
+  gulp.watch('./src/img/*', ['images']);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
   gulp.watch('./src/css/**/*.css', ['inline']);
   gulp.watch('./src/**/*.html', ['inline']);
@@ -37,7 +39,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('inline', function () {
-    gulp.src('./src/index.html')
+    gulp.src('./src/**/*.html')
         .pipe(inlinesource({
           compress: false
         }))
@@ -49,5 +51,13 @@ gulp.task('inline', function () {
         .pipe(browserSync.stream());
 });
 
+/**
+ * Images
+ */
+gulp.task('images', function () {
+  gulp.src('./src/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img'))
+});
 
 gulp.task('default', ['serve']);
